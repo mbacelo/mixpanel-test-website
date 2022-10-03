@@ -1,12 +1,3 @@
-function initialize() {
-  //track links
-  mixpanel.track_links("#nav a", "click nav link", {
-    referrer: document.referrer,
-  });
-}
-
-initialize();
-
 function playSong(title, artist, genre) {
   mixpanel.track("Song Play", {
     "Song Title": title,
@@ -76,8 +67,8 @@ function displayToast(toastMessage) {
   }).showToast();
 }
 
-function viewPage() {
-  mixpanel.track("View main page");
+function viewPageEvent(pageName) {
+  mixpanel.track(pageName);
 
-  displayToast("View main page");
+  displayToast(pageName);
 }

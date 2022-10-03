@@ -47,7 +47,7 @@
         <br />
         <button class="btn btn-primary" onclick="signUp()">Sign up</button>
         <button class="btn btn-primary" onclick="login()">Login</button>
-        <button class="btn btn-secondary" onclick="viewPage()">
+        <button class="btn btn-secondary" onclick="viewPageEvent('Index page')">
           View page
         </button>
         <button
@@ -86,4 +86,11 @@
     ></script>
   </body>
 </html>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+  $(window).on("load", function () {
+    //track links
+    mixpanel.track_links("#nav a", "click nav link", {
+      referrer: document.referrer,
+    });
+  });
+</script>
