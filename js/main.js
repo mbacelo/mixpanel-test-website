@@ -72,3 +72,9 @@ function viewPageEvent(pageName) {
 
   displayToast(pageName);
 }
+
+function trackLinks(linkSelector) {
+  mixpanel.track_links(linkSelector, "click nav link", {
+    referrer: document.referrer,
+  });
+}
