@@ -66,6 +66,5 @@
 })(document, window.mixpanel || []);
 
 // Enabling the debug mode flag is useful during implementation,
-// but it's recommended you remove it for production
+// but it's recommended you remove it for production.  mixpanel.init('d806afc5456ed2433ff1a745f3b9d517');
 mixpanel.init("d806afc5456ed2433ff1a745f3b9d517", { debug: true });
-//mixpanel.init('d806afc5456ed2433ff1a745f3b9d517');
